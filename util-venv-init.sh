@@ -14,5 +14,5 @@ else
   # Install project dependencies...
   pip install -r requirements-dev.txt
   # User info...
-  echo "Use next command to activate venv: '. ./.venv/Scripts/activate'"
+  echo "Use next command to activate venv: '. ./.venv/Scripts/activate' (unix)"
 fi

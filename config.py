@@ -2,7 +2,7 @@
 # @module config
 # @desc Universal server & client config
 # @since 2020.02.23, 02:18
-# @changed 2020.10.20, 23:29
+# @changed 2021.07.25, 23:04
 # See:
 #  - https://docs.python.org/3/library/configparser.html -- ???
 #  - https://stackoverflow.com/questions/9590382/forcing-python-json-module-to-work-with-ascii
@@ -36,8 +36,8 @@ if path.isfile(packageFilename):
     pkgConfigFile.close()
 
 if path.isfile(buildTagFilename):
-    buildTagFile = open(buildTagFilename, 'rb')
-    buildTag = buildTagFile.read()
+    buildTagFile = open(buildTagFilename, 'r')
+    buildTag = buildTagFile.read().strip()
     buildTagFile.close()
 
 config = {  # Default config

@@ -25,6 +25,12 @@ In `.venv/Lib/site-packages/engineio/client.py` use #2:
 from simplejson import JSONDecodeError
 ```
 
+Or (alternatively) next packets combination can be used:
+
+- Flask-SocketIO==4.3.1
+- python-engineio==3.13.2
+- python-socketio==4.6.0
+
 
 ## Python 2.7 socket links:
 
@@ -32,6 +38,13 @@ from simplejson import JSONDecodeError
 - [Socket Programming HOWTO — Python 2.7.6 documentation](https://cpython-test-docs.readthedocs.io/en/latest/howto/sockets.html)
 - [python - Using Flask-socketio and the socketIO client - Stack Overflow](https://stackoverflow.com/questions/48160130/using-flask-socketio-and-the-socketio-client)
 - [Client Examples (Python 3.5+)](https://python-socketio.readthedocs.io/en/latest/intro.html#client-examples)
+
+
+## SocketIO:
+
+- [Getting Started — Flask-SocketIO documentation](https://flask-socketio.readthedocs.io/en/latest/getting_started.html#initialization)
+- [Socket.io example with jquery and dom manipulation](https://gist.github.com/anandgeorge/2814934)
+- [Easy WebSockets with Flask and Gevent - miguelgrinberg.com](https://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
 
 
 ## Server
