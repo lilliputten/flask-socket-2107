@@ -1,0 +1,28 @@
+{
+  "name": "flask-sockets",
+  "demo-server": "http://cam.lilliputten.ru/",
+  "version": "0.0.1",
+  "timetag": "210725-2115",
+  "timestamp": "2021.07.25, 21:15",
+  "changed": "2021.07.25, 21:17",
+  "author": "lilliputten <igor@lilliputten.ru>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lilliputten/flask-socket-2107.git"
+  },
+  "devDependencies": {
+    "dateformat": "^3.0.3",
+    "npm-package-user-scripts-list": "^0.1.10",
+    "npm-run-all": "^4.1.5"
+  },
+  "scripts": {
+    "postinstall-cam-client-app-build-UNUSED": "echo --Install publish submodule (posix commands used)-- && sh ./util-cam-client-app-build-init.sh",
+    "postinstall-venv-init": "echo --Install publish submodule (posix commands used)-- && sh ./util-venv-init.sh",
+    "postinstall": "echo --Run postinstall tasks-- && npm-run-all postinstall-venv-init",
+    "increment-version": "echo --Increment patch version-- && node util-increment-version.js",
+    "update-build-time": "echo --Update build timestamp-- && node util-update-build-time.js",
+    "update-build-variables": "echo --Update build properties-- && sh util-update-build-variables.sh",
+    "help": "echo --List all available script commands-- && npm-package-user-scripts-list"
+  }
+}
