@@ -1,0 +1,9 @@
+--- client.py.ORIG	2021-07-25 21:37:30.571481300 +0300
++++ client.py	2021-07-25 21:37:37.921829800 +0300
+@@ -1,5 +1,5 @@
+ from base64 import b64encode
+-from json import JSONDecodeError
++from simplejson import JSONDecodeError
+ import logging
+ try:
+     import queue

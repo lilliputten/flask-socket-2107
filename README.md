@@ -10,6 +10,8 @@
 
 ## Sockets (Flask-SocketIO)
 
+In case of flask error 'ImportError: cannot import name JSONDecodeError':
+
 > If you really need it for python 2, use a older version.. pip install Flask-SocketIO==4.3.2
 
 ```
