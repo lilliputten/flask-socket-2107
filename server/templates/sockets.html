@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Sockets test{% endblock %}
 
 {% block content %}
   {% if name %}
@@ -9,3 +9,14 @@
     <h1>Hello World!</h1>
   {% endif %}
 {% endblock %}
+
+{% block js %}
+  {{ super() }}
+  {% if 'FLASK_ENV'|getenv == 'development' %}
+  <script src="/flask-static/cdn/js/socket.io.js"></script>
+  {% else %}
+  <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
+  {% endif %}
+  <script src="/flask-static/sockets.js"></script>
+{% endblock js %}
+

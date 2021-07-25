@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="mobile-web-app-capable" content="yes" />
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    {% block css %}
     {% if 'FLASK_ENV'|getenv == 'development' %}
     <link rel="stylesheet" href="/flask-static/cdn/css/bootstrap.css" />
     <link rel="stylesheet" href="/flask-static/cdn/css/font-awesome.css" />
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     {% endif %}
     <link rel="stylesheet" href="/flask-static/styles.css">
+    {% endblock css %}
   </head>
   <body class="body">
 
@@ -36,7 +38,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!-- Main menu
+        <!-- // UNUSED: Main menu
         <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul class="navbar-nav text-center">
             <li class="nav-item {% if request.url_rule.endpoint == 'viewLastImage' %}active{% endif %}">
@@ -61,6 +63,7 @@
       </div>
     </main>
 
+    <!-- // UNUSED: Modals...
     <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -77,7 +80,9 @@
         </div>
       </div>
     </div>
+    -->
 
+    {% block js %}
     {% if 'FLASK_ENV'|getenv == 'development' %}
     <script src="/flask-static/cdn/js/jquery-3.5.1.slim.js"></script>
     <script src="/flask-static/cdn/js/bootstrap.js"></script>
@@ -85,5 +90,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     {% endif %}
+    {% endblock js %}
+
   </body>
 </html>

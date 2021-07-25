@@ -22,9 +22,7 @@ from .logger import DEBUG
 
 #  Sockets test...
 from flask_socketio import SocketIO, emit
-# from flask_sockets import Sockets
 
-# sockets = Sockets(app)
 socketio = SocketIO(app)
 
 #  DEBUG('Server started', {
@@ -34,22 +32,13 @@ socketio = SocketIO(app)
 
 
 @app.route('/')
-def testRootPage():
+def rootPage():
     """
-    Default page (last image or all images list)
+    Default page
     """
-    return render_template('hello.html', name='Default')
+    return render_template('sockets.html')
     #  return redirect('/last')
-    #  return listImages.listAllImages()
     #  return listImages.viewLastImage()
-
-
-# # Sockets test 002...
-#
-#
-# @socketio.event
-# def my_event(message):
-#     emit('my response', {'data': 'got it!'})
 
 
 # Sockets test 001...

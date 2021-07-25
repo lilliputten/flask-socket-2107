@@ -30,6 +30,7 @@ from simplejson import JSONDecodeError
 
 - [Python 2.7 Socket programming ports - Stack Overflow](https://stackoverflow.com/questions/52053884/python-2-7-socket-programming-ports)
 - [Socket Programming HOWTO — Python 2.7.6 documentation](https://cpython-test-docs.readthedocs.io/en/latest/howto/sockets.html)
+- [python - Using Flask-socketio and the socketIO client - Stack Overflow](https://stackoverflow.com/questions/48160130/using-flask-socketio-and-the-socketio-client)
 - [Client Examples (Python 3.5+)](https://python-socketio.readthedocs.io/en/latest/intro.html#client-examples)
 
 
